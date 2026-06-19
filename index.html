@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharada Leather Industries | Premium Leather Manufacturing in Kano, Nigeria</title>
+    <meta name="description" content="Northern Nigeria's premier leather manufacturing powerhouse. ISO-compliant facility producing world-class leather products for businesses across Nigeria and beyond.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #1E293B;
+            --color-accent: #DC2626;
+            --color-bg: #FFFFFF;
+            --color-text: #0F172A;
+            --color-surface: #F1F5F9;
+            --font-display: 'Barlow Condensed', serif;
+            --font-body: 'Inter', sans-serif;
+            --radius: 4px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background: var(--color-bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        section {
+            padding: 48px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp 0.8s ease-out forwards;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--color-primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--color-accent);
+        }
+
+        .nav-links {
+            display: none;
+            list-style: none;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--color-accent);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--color-accent);
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #B91C1C;
+            border-color: #B91C1C;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: var(--color-primary);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            background: white;
+            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+            padding: 80px 32px 32px;
+            transition: right 0.3s ease;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .mobile-menu a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #334155 100%);
+            color: white;
+            padding: 0;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0;
+            min-height: 90vh;
+        }
+
+        .hero-content {
+            padding: 48px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 42px;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 32px;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            position: relative;
+            min-height: 400px;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* STATS BAR */
+        .stats-bar {
+            background: var(--color-surface);
+            padding: 48px 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: var(--font-display);
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--color-accent);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 15px;
+            color: var(--color-text);
+            font-weight: 600;
+        }
+
+        /* PRODUCTS SECTION */
+        .products {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 48px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            color: var(--color-primary);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: var(--color-text);
+            opacity: 0.85;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-content {
+            padding: 24px;
+        }
+
+        .product-content h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: var(--color-primary);
+        }
+
+        .product-content p {
+            font-size: 15px;
+            margin-bottom: 20px;
+            opacity: 0.85;
+        }
+
+        /* CAPABILITIES SECTION */
+        .capabilities {
+            background: var(--color-surface);
+            padding: 80px 20px;
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .capability-card {
+            background: white;
+            padding: 32px;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .capability-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .capability-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: white;
+        }
+
+        .capability-card h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: var(--color-primary);
+        }
+
+        .capability-card p {
+            font-size: 15px;
+            opacity: 0.85;
+        }
+
+        /* CERTIFICATIONS */
+        .certifications {
+            background: var(--color-primary);
+            color: white;
+            padding: 64px 20px;
+            text-align: center;
+        }
+
+        .certifications h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .cert-badges {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .cert-badge {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius);
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--color-primary);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        /* WHY CHOOSE US */
+        .why-us {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            max-width: 1200px;
+            margin: 48px auto 0;
+        }
+
+        .feature-card {
+            display: flex;
+            gap: 20px;
+            padding: 32px;
+            background: var(--color-surface);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--color-accent);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .feature-icon {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+
+        .feature-content h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+            color: var(--color-primary);
+        }
+
+        .feature-content p {
+            font-size: 15px;
+            opacity: 0.85;
+        }
+
+        /* MANUFACTURING SECTION */
+        .manufacturing {
+            background: var(--color-surface);
+            padding: 80px 20px;
+        }
+
+        .manufacturing-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .manufacturing-image {
+            width: 100%;
+            height: 400px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .manufacturing-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .manufacturing-text h2 {
+            font-size: 42px;
+            color: var(--color-primary);
+            margin-bottom: 24px;
+        }
+
+        .manufacturing-text p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        /* SUSTAINABILITY */
+        .sustainability {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .sustainability-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .sustainability-content h2 {
+            font-size: 42px;
+            color: var(--color-primary);
+            margin-bottom: 24px;
+        }
+
+        .sustainability-content p {
+            font-size: 17px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* CONTACT SECTION */
+        .contact {
+            background: var(--color-surface);
+            padding: 80px 20px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info h2 {
+            font-size: 42px;
+            color: var(--color-primary);
+            margin-bottom: 24px;
+        }
+
+        .contact-info p {
+            font-size: 17px;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-item-content h3 {
+            font-size: 16px;
+            margin-bottom: 4px;
+            color: var(--color-primary);
+        }
+
+        .contact-item-content p {
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .contact-item-content a {
+            color: var(--color-text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item-content a:hover {
+            color: var(--color-accent);
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-form h3 {
+            font-size: 28px;
+            color: var(--color-primary);
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #E2E8F0;
+            border-radius: var(--radius);
+            font-family: var(--font-body);
+            font-size: 15px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 300px;
+            background: var(--color-surface);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-text);
+            font-weight: 600;
+            margin-top: 32px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--color-primary);
+            color: white;
+            padding: 64px 20px 32px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 48px;
+        }
+
+        .footer-about h3 {
+            font-size: 26px;
+            margin-bottom: 16px;
+        }
+
+        .footer-about p {
+            opacity: 0.9;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .footer-links h4 {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.85;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--color-accent);
+        }
+
+        .footer-contact h4 {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        .footer-contact p {
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .footer-contact a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+        }
+
+        /* WHATSAPP BUTTON */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            z-index: 998;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
+            font-size: 32px;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.6);
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (min-width: 768px) {
+            section {
+                padding: 80px 40px;
+            }
+
+            .nav-links {
+                display: flex;
+            }
+
+            .hamburger {
+                display: none;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero-content {
+                padding: 80px 40px;
+            }
+
+            .hero-content h1 {
+                font-size: 56px;
+            }
+
+            .hero-image {
+                min-height: 90vh;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .capabilities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .manufacturing-content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .capabilities-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <a href="#" class="logo">SHARADA<span> LEATHER</span></a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#capabilities">Capabilities</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="btn">Request Quote</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#hero" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#products" onclick="toggleMenu()">Products</a></li>
+            <li><a href="#capabilities" onclick="toggleMenu()">Capabilities</a></li>
+            <li><a href="#why-us" onclick="toggleMenu()">Why Us</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            <li><a href="#contact" class="btn" onclick="toggleMenu()">Request Quote</a></li>
+        </ul>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+        <div class="hero-grid fade-up">
+            <div class="hero-content">
+                <h1>Crafting Excellence in Leather Since Generations</h1>
+                <p>Welcome to Sharada Leather Industries, Northern Nigeria's premier leather manufacturing powerhouse. From our state-of-the-art facility in Kano's industrial heartland, we transform premium hides into world-class leather products that meet international standards. Our heritage of craftsmanship combined with modern manufacturing excellence makes us the trusted partner for businesses across Nigeria and beyond. Experience leather manufacturing that honors tradition while embracing innovation.</p>
+                <div class="hero-cta">
+                    <a href="#products" class="btn">Our Products</a>
+                    <a href="#contact" class="btn btn-outline">Get Quote</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.pexels.com/photos/17315564/pexels-photo-17315564.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Modern leather manufacturing facility" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar fade-up">
+        <div class="stats-grid container">
+            <div class="stat-item">
+                <span class="stat-value">50,000+</span>
+                <span class="stat-label">sq.ft/month Production Capacity</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">150+</span>
+                <span class="stat-label">Skilled Artisans</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">30+</span>
+                <span class="stat-label">Years of Excellence</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">5,000</span>
+                <span class="stat-label">sq. meters Facility Size</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="sustainability fade-up">
+        <div class="sustainability-content">
+            <h2>Our Heritage</h2>
+            <p>Situated in the historic Sharada Industrial Estate, we represent the best of Northern Nigeria's legendary leather tradition. Our facility employs over 150 skilled artisans and modern technicians who bring decades of combined expertise to every product. We source the finest raw materials from across Nigeria and process them using cutting-edge tanning and finishing technologies. Our commitment to quality has made us a preferred supplier to major Nigerian retailers, exporters, and government institutions. We're not just manufacturing leather goods; we're preserving and elevating Nigeria's rich leather heritage while creating sustainable employment for our community.</p>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section id="products" class="products fade-up">
+        <div class="section-header">
+            <h2>Our Product Range</h2>
+            <p>From executive leather accessories to industrial-grade materials, Sharada Leather Industries delivers exceptional quality across every category.</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.pexels.com/photos/21897317/pexels-photo-21897317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Finished Leather" loading="lazy">
+                </div>
+                <div class="product-content">
+                    <h3>Finished Leather (Chrome & Vegetable Tanned)</h3>
+                    <p>Premium quality finished leather in various textures and colors. Suitable for high-end fashion and footwear manufacturing with excellent durability.</p>
+                    <a href="#contact" class="btn">Enquire</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.pexels.com/photos/21897317/pexels-photo-21897317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Footwear Leather" loading="lazy">
+                </div>
+                <div class="product-content">
+                    <h3>Footwear Leather Materials</h3>
+                    <p>Specifically processed leather for shoe manufacturing. Available in full-grain and corrected finishes with excellent flexibility and strength.</p>
+                    <a href="#contact" class="btn">Enquire</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.pexels.com/photos/21897317/pexels-photo-21897317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Upholstery Leather" loading="lazy">
+                </div>
+                <div class="product-content">
+                    <h3>Upholstery & Furniture Leather</h3>
+                    <p>Heavy-duty leather perfect for furniture, automotive interiors, and office furnishings. Long-lasting with superior comfort and aesthetics.</p>
+                    <a href="#contact" class="btn">Enquire</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.pexels.com/photos/21897317/pexels-photo-21897317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Fashion Leather" loading="lazy">
+                </div>
+                <div class="product-content">
+                    <h3>Fashion & Garment Leather</h3>
+                    <p>Soft, supple leather ideal for designer clothing, jackets, and fashion accessories. Available in trending colors and finishes.</p>
+                    <a href="#contact" class="btn">Enquire</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.pexels.com/photos/21897317/pexels-photo-21897317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Leather Bags" loading="lazy">
+                </div>
+                <div class="product-content">
+                    <h3>Leather Bags & Accessories</h3>
+                    <p>Ready-made premium leather bags, wallets, belts, and fashion accessories. Perfect for retail and corporate gifting with custom branding options.</p>
+                    <a href="#contact" class="btn">Enquire</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.pexels.com/photos/21897317/pexels-photo-21897317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Custom Processing" loading="lazy">
+                </div>
+                <div class="product-content">
+                    <h3>Custom Leather Processing</h3>
+                    <p>Bespoke tanning, dyeing, and finishing services tailored to your specifications. From concept to delivery with technical consultation.</p>
+                    <a href="#contact" class="btn">Enquire</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAPABILITIES SECTION -->
+    <section id="capabilities" class="capabilities fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Capabilities</h2>
+                <p>World-class manufacturing infrastructure meeting international quality standards</p>
+            </div>
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <div class="capability-icon">⚙️</div>
+                    <h3>Production Capacity</h3>
+                    <p>50,000+ square feet per month production capacity with scalable infrastructure for both small batches and large industrial orders.</p>
+                </div>
+                <div class="capability-card">
+                    <div class="capability-icon">✓</div>
+                    <h3>Quality Standards</h3>
+                    <p>ISO-compliant processes with NAFDAC and SON certifications. Rigorous quality control at every manufacturing stage.</p>
+                </div>
+                <div class="capability-card">
+                    <div class="capability-icon">🚚</div>
+                    <h3>Lead Time</h3>
+                    <p>Efficient production schedules ensuring timely delivery. Just-in-time manufacturing available for established supply chains.</p>
+                </div>
+                <div class="capability-card">
+                    <div class="capability-icon">🌍</div>
+                    <h3>Export-Ready</h3>
+                    <p>Full export documentation support and international quality standards compliance for West African and global markets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="certifications fade-up">
+        <h2>Certified Quality You Can Trust</h2>
+        <div class="cert-badges">
+            <div class="cert-badge">NAFDAC CERTIFIED</div>
+            <div class="cert-badge">SON APPROVED</div>
+            <div class="cert-badge">ISO 9001</div>
+            <div class="cert-badge">EXPORT READY</div>
+        </div>
+    </section>
+
+    <!-- MANUFACTURING EXCELLENCE -->
+    <section class="manufacturing fade-up">
+        <div class="manufacturing-content">
+            <div class="manufacturing-image">
+                <img src="https://images.pexels.com/photos/37295808/pexels-photo-37295808.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Leather manufacturing process" loading="lazy">
+            </div>
+            <div class="manufacturing-text">
+                <h2>Manufacturing Excellence</h2>
+                <p>Our 5,000 square meter facility houses advanced tanning drums, finishing equipment, and quality control laboratories that ensure every batch meets stringent standards. We employ eco-friendly tanning processes that minimize environmental impact while maximizing leather quality and durability.</p>
+                <p>Our production line handles everything from raw hide procurement through final product delivery, with rigorous quality checks at every stage. We maintain ISO-compliant processes and can scale production from small artisan batches to large industrial orders. Our technical team works closely with clients to develop custom leather specifications, colors, and finishes that bring your vision to life while maintaining our trademark Sharada quality.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="why-us" class="why-us fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Sharada</h2>
+                <p>Your trusted partner for quality, reliability, and innovation in leather manufacturing</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <div class="feature-content">
+                        <h3>30+ Years of Heritage</h3>
+                        <p>Decades of operational excellence combining traditional craftsmanship with modern efficiency in Kano's industrial landscape.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-content">
+                        <h3>Vertical Integration</h3>
+                        <p>Complete control from raw material selection to final finishing ensures consistent quality throughout the production process.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <div class="feature-content">
+                        <h3>Competitive Pricing</h3>
+                        <p>Efficient operations deliver excellent value without compromising quality. Flexible MOQs accommodate all business sizes.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <div class="feature-content">
+                        <h3>Partnership Approach</h3>
+                        <p>Technical consultation, after-sales support, and reliable delivery schedules have earned us long-term relationships with Nigeria's leading brands.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUSTAINABILITY -->
+    <section class="sustainability fade-up">
+        <div class="sustainability-content">
+            <h2>Sustainability & Community</h2>
+            <p>At Sharada Leather Industries, we're committed to responsible manufacturing that benefits both business and community. Our waste management systems convert leather scraps into valuable by-products, while our water treatment facilities ensure environmental compliance. We actively train young Nigerians in leather craftsmanship, preserving traditional skills while introducing modern techniques. Our local sourcing programs support Nigerian farmers and hide collectors, creating a sustainable value chain that strengthens the entire industry. We partner with technical institutions in Kano to develop curriculum that produces industry-ready graduates. By choosing Sharada, you support a business that's investing in Nigeria's industrial future, creating quality jobs, and manufacturing with conscience.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact fade-up">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <p>Ready to experience Nigeria's finest leather manufacturing? Our team at Sharada Industrial Estate welcomes visits from potential partners, bulk buyers, designers, and anyone interested in quality leather solutions. Visit our facility to see our processes firsthand, examine our quality standards, and discuss how Sharada Leather Industries can become your trusted manufacturing partner.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-item-content">
+                            <h3>Location</h3>
+                            <p>Sharada Industrial Estate<br>Kano Municipal, Kano State<br>Nigeria</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-item-content">
+                            <h3>Phone</h3>
+                            <p><a href="tel:+2348031234580">+234 803 123 4580</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-item-content">
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@sharada-leather-industries.ng">info@sharada-leather-industries.ng</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-item-content">
+                            <h3>WhatsApp</h3>
+                            <p><a href="https://wa.me/2348031234580">Click to chat with us</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Request a Quote</h3>
+                <form>
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" placeholder="Your company">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" required placeholder="+234 XXX XXX XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label>Product Interest</label>
+                        <input type="text" placeholder="e.g. Footwear Leather, Custom Processing">
+                    </div>
+                    <div class="form-group">
+                        <label>Message *</label>
+                        <textarea required placeholder="Tell us about your requirements, quantity needed, specifications, etc."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Enquiry</button>
+                </form>
+            </div>
+        </div>
+        <div class="map-placeholder container">
+            📍 Sharada Industrial Estate, Kano Municipal, Kano State, Nigeria
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h3>Sharada Leather Industries</h3>
+                <p>Manufacturing excellence in leather goods since establishment. Located in Sharada Industrial Estate, Kano, we serve clients across Nigeria and West Africa with premium leather products and processing services. Your trusted partner for quality, reliability, and innovation in leather manufacturing.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#capabilities">Capabilities</a></li>
+                    <li><a href="#why-us">Why Choose Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Request Quote</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><strong>Address:</strong><br>Sharada Industrial Estate<br>Kano Municipal, Kano State<br>Nigeria</p>
+                <p><strong>Phone:</strong> <a href="tel:+2348031234580">+234 803 123 4580</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@sharada-leather-industries.ng">info@sharada-leather-industries.ng</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Sharada Leather Industries · All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/2348031234580" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.828.736 5.484 2.012 7.792L0 32l8.384-2.012A15.904 15.904 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm8.064 22.736c-.348.976-1.724 1.788-2.828 2.024-.744.156-1.716.28-4.984-.828-4.176-1.416-6.864-5.648-7.076-5.912-.208-.264-1.704-2.268-1.704-4.328 0-2.06 1.08-3.072 1.464-3.492.384-.42.84-.524 1.12-.524.28 0 .56.004.804.016.26.012.608-.1.952.724.348.836 1.188 2.896 1.292 3.104.104.208.176.452.036.716-.14.264-.208.428-.416.66-.208.232-.436.516-.624.692-.208.196-.424.408-.184.8.24.392 1.068 1.76 2.292 2.848 1.576 1.4 2.904 1.832 3.32 2.04.416.208.66.176.904-.104.244-.28 1.048-1.224 1.328-1.644.28-.42.56-.352.944-.208.384.144 2.444 1.152 2.864 1.36.42.208.7.312.804.488.104.176.104 1.012-.244 1.988z" fill="white"/>
+        </svg>
+    </a>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.querySelector('.hamburger');
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                menu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
